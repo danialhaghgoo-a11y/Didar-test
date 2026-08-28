@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Didar Stuttgart – Iranische Kulturgemeinschaft</title>
+<meta name="description" content="Didar Stuttgart – Iranische Kulturgemeinschaft. Kontakt über Telegram.">
+<link rel="icon" href="logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Vazirmatn:wght@300;400;500;600&family=Lalezar&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --olive-dark:#3E4B2C;
+    --olive:#5C6B3C;
+    --sage:#8B9A5C;
+    --tan:#D9A96A;
+    --tan-soft:#E8C495;
+    --cream:#F1ECE0;
+    --ink:#2B2A22;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{
+    min-height:100vh;
+    background-color:var(--cream);
+    background-image:
+      repeating-linear-gradient(115deg, rgba(43,42,34,0.02) 0 1px, transparent 1px 5px),
+      repeating-linear-gradient(25deg, rgba(43,42,34,0.018) 0 1px, transparent 1px 6px);
+    color:var(--ink);
+    font-family:'Vazirmatn',-apple-system,BlinkMacSystemFont,sans-serif;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    padding:40px 24px;
+    position:relative;
+    overflow-x:hidden;
+  }
+  @media (prefers-reduced-motion: reduce){*{animation-duration:.01ms!important;transition-duration:.01ms!important}}
+
+  /* schlichter Bogen im Hintergrund, greift die Torbogen-Form des Logos auf */
+  .arch-bg{
+    position:absolute;
+    bottom:0; left:50%; transform:translateX(-50%);
+    width:min(900px,140vw); height:min(560px,70vh);
+    border-top-left-radius:50% 100%;
+    border-top-right-radius:50% 100%;
+    background:linear-gradient(180deg, transparent 0%, rgba(92,107,60,0.08) 100%);
+    border:1.5px solid rgba(62,75,44,0.14);
+    pointer-events:none;
+  }
+
+  .card{
+    position:relative;
+    z-index:1;
+    max-width:480px;
+    width:100%;
+    text-align:center;
+  }
+
+  .logo{
+    width:150px;
+    height:150px;
+    margin:0 auto 30px;
+    filter:drop-shadow(0 10px 24px rgba(62,75,44,0.18));
+    opacity:0;
+    animation:rise .8s ease forwards;
+  }
+  @keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
+
+  .fa-word{
+    font-family:'Lalezar','Vazirmatn',sans-serif;
+    font-size:2.4rem;
+    font-weight:400;
+    color:var(--olive-dark);
+    line-height:1;
+    margin-bottom:6px;
+  }
+  h1{
+    font-family:'Cormorant Garamond',serif;
+    font-weight:600;
+    font-size:1.5rem;
+    letter-spacing:.06em;
+    text-transform:uppercase;
+    color:var(--olive);
+    margin-bottom:6px;
+  }
+  .city{
+    font-size:.82rem;
+    letter-spacing:.18em;
+    text-transform:uppercase;
+    color:var(--tan);
+    font-weight:600;
+    margin-bottom:26px;
+  }
+  p.tagline{
+    font-size:1.02rem;
+    line-height:1.7;
+    color:rgba(43,42,34,.78);
+    max-width:38ch;
+    margin:0 auto 36px;
+  }
+
+  .btn{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    padding:15px 32px;
+    background:var(--olive-dark);
+    color:var(--cream);
+    border-radius:3px;
+    font-size:.96rem;
+    font-weight:500;
+    letter-spacing:.02em;
+    transition:transform .2s ease, box-shadow .2s ease, background .2s ease;
+    text-decoration:none;
+  }
+  .btn:hover{
+    transform:translateY(-2px);
+    box-shadow:0 12px 26px rgba(62,75,44,.28);
+    background:var(--olive);
+  }
+  .btn svg{width:19px;height:19px;flex-shrink:0}
+
+  .note{
+    margin-top:40px;
+    font-size:.82rem;
+    color:rgba(43,42,34,.5);
+    letter-spacing:.03em;
+  }
+
+  footer{
+    margin-top:60px;
+    font-size:.75rem;
+    color:rgba(43,42,34,.4);
+    position:relative;
+    z-index:1;
+  }
+</style>
+</head>
+<body>
+
+<div class="arch-bg"></div>
+
+<div class="card">
+  <img src="logo.png" alt="Didar Logo" class="logo">
+  <div class="fa-word">دیدار</div>
+  <h1>Didar</h1>
+  <div class="city">Iranische Kulturgemeinschaft · Stuttgart</div>
+  <p class="tagline">Ein Ort der Begegnung für iranische Kultur, Sprache und Gemeinschaft in Stuttgart. Mehr über uns folgt in Kürze — schreib uns schon jetzt auf Telegram.</p>
+
+  <a href="https://t.me/Didar_stuttgart" class="btn" target="_blank" rel="noopener">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9.036 15.803 8.7 20.55c.47 0 .674-.202.92-.444l2.207-2.113 4.574 3.35c.838.462 1.44.22 1.66-.775L21.94 4.86c.324-1.22-.44-1.72-1.256-1.42L2.36 10.86c-1.192.462-1.176 1.13-.204 1.43l4.53 1.414L17.6 6.62c.502-.328.96-.146.584.183"/></svg>
+    Kontakt auf Telegram
+  </a>
+
+  <div class="note">@Didar_stuttgart</div>
+</div>
+
+<footer>© 2026 Didar Stuttgart — Website in Aufbau</footer>
+
+</body>
+</html>
